@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams, useRouter } from 'next/navigation';
-import { useCharacterById } from '../../hooks/useCharacterById';
+import { useCharacterById } from '../../../hooks/useCharacterById';
 import Spinner from '../../../components/Spinner';
 import ErrorMessage from '../../../components/ErrorMessage';
 import Image from 'next/image';
@@ -32,11 +32,11 @@ export default function CharacterDetailPage() {
         className="w-full" />
         <div className="p-6 space-y-2">
           <h1 className="text-2xl font-bold">{character.name}</h1>
-          <p><span className="text-gray-400">Estado:</span> {character.status}</p>
-          <p><span className="text-gray-400">Especie:</span> {character.species}</p>
-          <p><span className="text-gray-400">Género:</span> {character.gender}</p>
-          <p><span className="text-gray-400">Origen:</span> {character.origin.name}</p>
-          <p><span className="text-gray-400">Ubicación:</span> {character.location.name}</p>
+          <p><span className="text-gray-400">Status:</span> {character.status}</p>
+          <p><span className="text-gray-400">Species:</span> {character.species}</p>
+          <p><span className="text-gray-400">Gender:</span> {character.gender}</p>
+          <p><span className="text-gray-400">Origin:</span> {character.origin.name}</p>
+          <p><span className="text-gray-400">Location:</span> {character.location.name}</p>
         </div>
       </div>
     </main>

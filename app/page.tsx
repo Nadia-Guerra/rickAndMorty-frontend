@@ -16,9 +16,9 @@ export default function HomePage() {
           href="/characters"
           className="bg-gray-800 hover:bg-gray-700 transition p-6 rounded-xl text-center shadow"
         >
-          <h2 className="text-xl font-semibold mb-2">Personajes</h2>
+          <h2 className="text-xl font-semibold mb-2">Characters</h2>
           <p className="text-gray-400 text-sm">
-            Explora todos los personajes
+            Explore all the characters
           </p>
         </Link>
 
@@ -26,9 +26,9 @@ export default function HomePage() {
           href="/episodes"
           className="bg-gray-800 hover:bg-gray-700 transition p-6 rounded-xl text-center shadow"
         >
-          <h2 className="text-xl font-semibold mb-2">Episodios</h2>
+          <h2 className="text-xl font-semibold mb-2">Episodes</h2>
           <p className="text-gray-400 text-sm">
-            Ver lista de episodios
+            Explore all the episodes
           </p>
         </Link>
 
@@ -38,7 +38,7 @@ export default function HomePage() {
         >
           <h2 className="text-xl font-semibold mb-2">Locaciones</h2>
           <p className="text-gray-400 text-sm">
-            Descubre los lugares del universo
+            Discover all the places in the universe!
           </p>
         </Link>
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useCharacters } from '../hooks/useCharacters';
+import { useCharacters } from '../../hooks/useCharacters';
 import CharacterCard from '../../components/CharacterCard';
 import Spinner from '../../components/Spinner';
 import ErrorMessage from '../../components/ErrorMessage';
@@ -13,7 +13,7 @@ export default function CharactersPage() {
 
   return (
     <main className="p-6">
-      <h1 className="text-3xl font-bold text-white mb-6">Personajes</h1>
+      <h1 className="text-3xl font-bold text-white mb-6">Characters</h1>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {characters.map((character) => (
@@ -26,7 +26,7 @@ export default function CharactersPage() {
           className="px-4 py-2 bg-green-500 rounded-lg disabled:opacity-40 disabled:cursor-not-allowed">
           ← 
         </button>
-        <span className="text-white">Página {page} de {totalPages}</span>
+        <span className="text-white">Page {page} of {totalPages}</span>
         <button onClick={nextPage} disabled={page === totalPages}
           className="px-4 py-2 bg-green-500 rounded-lg disabled:opacity-40 disabled:cursor-not-allowed">
           →

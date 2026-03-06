@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getLocations } from '../services/rickandmorty.service';
-import { Location, LocationResponse } from '../../interfaces/location.interface';
+import { Location, LocationResponse } from '../interfaces/location.interface';
 
 export const useLocations = () => {
   const [locations, setLocations] = useState<Location[]>([]);

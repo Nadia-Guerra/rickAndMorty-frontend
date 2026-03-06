@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getCharacterById } from '../services/rickandmorty.service';
-import { Character } from '../../interfaces/character.interface';
+import { Character } from '../interfaces/character.interface';
 
 export const useCharacterById = (id: number) => {
   const [character, setCharacter] = useState<Character | null>(null);
@@ -13,7 +13,7 @@ export const useCharacterById = (id: number) => {
         setLoading(true);
         const data: Character = await getCharacterById(id);
         setCharacter(data);
-        
+
       } catch (err) {
         setError('No se pudo cargar el personaje.');
       } finally {

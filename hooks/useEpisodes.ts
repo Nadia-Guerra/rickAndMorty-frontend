@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getEpisodes } from '../services/rickandmorty.service';
-import { Episode, EpisodesResponse } from '../../interfaces/episode.interface';
+import { Episode, EpisodesResponse } from '../interfaces/episode.interface';
 
 export const useEpisodes = () => {
   const [episodes, setEpisodes] = useState<Episode[]>([]);

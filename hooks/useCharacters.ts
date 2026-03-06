@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getCharacters } from '../services/rickandmorty.service';
-import { Character, CharacterResponse } from '../../interfaces/character.interface';
+import { Character, CharacterResponse } from '../interfaces/character.interface';
 
 export const useCharacters = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
@@ -16,7 +16,7 @@ export const useCharacters = () => {
         const data: CharacterResponse = await getCharacters(page);
 
         setCharacters(data.results);
-        
+
         setTotalPages(data.info.pages);                     
       } catch {
         
