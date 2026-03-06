@@ -8,12 +8,14 @@ interface Props {
 
 export default function CharacterCard({ character }: Props) {
   return (
-    // Link de Next.js lleva a /characters/1, /characters/2, etc.
+    
     <Link href={`/characters/${character.id}`}>
       <div className="bg-gray-800 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform cursor-pointer">
         <Image
           src={character.image}
           alt={character.name}
+          width={300}
+          height={200}
           className="w-full h-48 object-cover"
         />
         <div className="p-3">
