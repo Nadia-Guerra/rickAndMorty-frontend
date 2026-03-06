@@ -13,6 +13,7 @@ export const useCharacterById = (id: number) => {
         setLoading(true);
         const data: Character = await getCharacterById(id);
         setCharacter(data);
+        
       } catch (err) {
         setError('No se pudo cargar el personaje.');
       } finally {

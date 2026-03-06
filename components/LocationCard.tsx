@@ -11,7 +11,6 @@ export default function LocationCard({ location }: Props) {
       <span className="text-green-400 text-sm font-bold">{location.name}</span>
       <h2 className="text-lg font-semibold mt-1">{location.type}</h2>
       <p className="text-gray-400 text-sm">{location.dimension}</p>
-      <p className="text-gray-400 text-sm">{location.residents}</p>
     </div>
   );
 }

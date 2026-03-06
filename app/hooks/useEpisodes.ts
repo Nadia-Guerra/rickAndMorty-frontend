@@ -10,14 +10,17 @@ export const useEpisodes = () => {
   const [totalPages, setTotalPages] = useState(1)
 
   useEffect(() => {
+
     const fetchEpisodes = async () => {
+      
       try {
         setLoading(true);
-        const data: EpisodesResponse = await getEpisodes();
+        
+        const data: EpisodesResponse = await getEpisodes(page);
         setEpisodes(data.results);
         setTotalPages(data.info.pages);
 
-      } catch (error) {
+      } catch{
         setError('No se pudieron cargar los episodios.');
 
       } finally {
@@ -26,9 +29,8 @@ export const useEpisodes = () => {
     };
 
     fetchEpisodes();
+    
   }, [page]);
-
-  return { episodes, loading, error };
 
   const nextPage = () => {
     if (page < totalPages) setPage(p => p + 1);

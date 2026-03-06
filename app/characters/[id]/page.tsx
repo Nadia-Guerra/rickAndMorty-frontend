@@ -25,7 +25,11 @@ export default function CharacterDetailPage() {
       </button>
 
       <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg text-white">
-        <Image src={character.image} alt={character.name} className="w-full" />
+        <Image src={character.image} 
+        alt={character.name} 
+        width={300}
+        height={200}
+        className="w-full" />
         <div className="p-6 space-y-2">
           <h1 className="text-2xl font-bold">{character.name}</h1>
           <p><span className="text-gray-400">Estado:</span> {character.status}</p>

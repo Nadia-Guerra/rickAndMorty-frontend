@@ -16,10 +16,9 @@ export const useCharacters = () => {
         const data: CharacterResponse = await getCharacters(page);
 
         setCharacters(data.results);
-        setCharacters(data.results);
-
+        
         setTotalPages(data.info.pages);                     
-      } catch (error) {
+      } catch {
         
         setError('No se pudieron cargar los personajes');
       } finally {
@@ -28,7 +27,7 @@ export const useCharacters = () => {
     };
 
     fetchCharacters();
-  }, [page]); // ← dependencia
+  }, [page]); 
 
   const nextPage = () => { if (page < totalPages) setPage(p => p + 1); };
   const prevPage = () => { if (page > 1) setPage(p => p - 1); };
